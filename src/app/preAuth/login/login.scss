@@ -1,0 +1,28 @@
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  // padding: 15px;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    width: 500px;
+    height: 300px;
+    .title {
+      font-family: Poppins-Bold;
+      font-size: 24px;
+      color: #333333;
+      line-height: 1.2;
+      text-align: center;
+      width: 100%;
+      display: block;
+      padding-bottom: 54px;
+    }
+  }
+}
