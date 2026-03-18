@@ -7,10 +7,11 @@ import {
   Validators,
 } from '@angular/forms';
 import { PreAuthService } from '../../Services/pre-auth-service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule, RouterLink],
   templateUrl: './login.html',
   styleUrl: './login.scss',
 })

@@ -1,1 +1,56 @@
-<p>register works!</p>
+<div class="main">
+  <div class="container">
+    <div class="card">
+      <h1 class="title">Register</h1>
+      <form [formGroup]="registerForm">
+        <div class="form-group">
+          <label>First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Type your first name"
+            formControlName="firstName"
+            appOnlyAlphabets
+          />
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input
+            type="text"
+            appOnlyAlphabets
+            class="form-control"
+            placeholder="Type your last name"
+            formControlName="lastName"
+            appOnlyAlphabets
+          />
+        </div>
+        <div class="form-group">
+          <label>Username/Email</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Type your username or email"
+            formControlName="userName"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Type your password"
+            formControlName="password"
+          />
+        </div>
+
+        <div class="login-btn">
+          <button class="btn" (click)="onSubmit()" [disabled]="registerForm.invalid">
+            Register
+          </button>
+        </div>
+        <p>Or <span routerLink="/login">Login</span></p>
+      </form>
+    </div>
+  </div>
+</div>
