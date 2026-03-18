@@ -20,8 +20,7 @@ export class Register {
     this.registerForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      userName: ['', Validators.required],
-      email: ['', Validators.required],
+      userName: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
     });
   }
