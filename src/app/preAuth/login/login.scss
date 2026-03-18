@@ -50,6 +50,9 @@
         border-radius: 50%;
         padding: 10px;
       }
+      button:disabled {
+        // cursor: no-drop !important;
+      }
     }
     p {
       text-align: center;
