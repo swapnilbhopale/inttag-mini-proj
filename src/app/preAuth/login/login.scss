@@ -5,7 +5,6 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  // padding: 15px;
   background: linear-gradient(-135deg, #c850c0, #4158d0);
   .container {
     display: flex;
@@ -13,16 +12,48 @@
   }
   .card {
     width: 500px;
-    height: 300px;
+    padding: 20px 70px;
+
     .title {
-      font-family: Poppins-Bold;
-      font-size: 24px;
+      font-family: 'Poppins-Bold';
+      font-size: 42px;
       color: #333333;
       line-height: 1.2;
       text-align: center;
+      font-weight: 700;
       width: 100%;
       display: block;
-      padding-bottom: 54px;
+    }
+    .form-group {
+      margin-top: 20px;
+      input {
+        border: 0;
+        border-bottom: 1px solid rgb(155, 154, 154);
+        border-radius: 0px;
+      }
+      input::placeholder {
+        font-size: 15px;
+      }
+      .form-control:focus {
+        box-shadow: none;
+      }
+    }
+    .login-btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      button {
+        background: linear-gradient(-135deg, #c850c0, #4158d0);
+        width: 50%;
+        font-size: 20px;
+        color: white;
+        border-radius: 50%;
+        padding: 10px;
+      }
+    }
+    p {
+      text-align: center;
+      margin-top: 20px;
     }
   }
 }
