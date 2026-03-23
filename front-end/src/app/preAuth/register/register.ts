@@ -33,8 +33,8 @@ export class Register {
         this.registerForm.reset();
       },
 
-      error: (err) => {
-        alert(`An error occurred: ${err}`);
+      error: (res: any) => {
+        alert(`An error occurred: ${res.error.message}`);
       },
     });
   }

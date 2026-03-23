@@ -29,14 +29,14 @@
           <input
             type="text"
             class="form-control"
-            placeholder="Type your username or email"
+            placeholder="Type your email"
             formControlName="email"
           />
         </div>
 
-        @if (registerForm.get('userName')?.invalid && registerForm.get('userName')?.touched) {
+        @if (registerForm.get('email')?.invalid && registerForm.get('email')?.touched) {
           <div>
-            @if (registerForm.get('userName')?.errors?.['email']) {
+            @if (registerForm.get('email')?.errors?.['email']) {
               <small class="text-danger"> Enter vallidate email. </small>
             }
           </div>
