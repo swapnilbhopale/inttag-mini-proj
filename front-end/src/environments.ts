@@ -1,1 +1,1 @@
-export const API_URL = 'https://motopartz.gerasim.in/api/Employee/';
+export const API_URL = 'http://localhost:3000';

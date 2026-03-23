@@ -20,16 +20,17 @@ export class Register {
     this.registerForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      userName: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
     });
   }
 
   onSubmit() {
     const formData = this.registerForm.value;
-    this.loginService.login(formData).subscribe({
-      next: (res) => {
-        // alert(`Login Successfull. ${formData.email + ' ' + formData.mobile}`);
+    this.loginService.register(formData).subscribe({
+      next: (res: any) => {
+        alert(res.message);
+        this.registerForm.reset();
       },
 
       error: (err) => {

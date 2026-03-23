@@ -4,7 +4,7 @@
       <h1 class="title">Login</h1>
       <form [formGroup]="loginForm">
         <div class="form-group">
-          <label>Username</label>
+          <label>Email</label>
           <input
             type="text"
             class="form-control"
@@ -18,14 +18,14 @@
             type="password"
             class="form-control"
             placeholder="Type your password"
-            formControlName="mobile"
+            formControlName="password"
           />
         </div>
 
         <div class="login-btn">
           <button class="btn" (click)="onSubmit()" [disabled]="loginForm.invalid">Login</button>
         </div>
-        <p>Or <span routerLink="/register">SignUp</span></p>
+        <p>Or <span class="text-decoration-underline" routerLink="/register">SignUp</span></p>
       </form>
     </div>
   </div>

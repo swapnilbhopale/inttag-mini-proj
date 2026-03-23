@@ -3,28 +3,28 @@ const studentSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      require: true,
+      required: true,
     },
     age: {
       type: Number,
-      require: true,
+      required: true,
     },
     email: {
       type: String,
-      require: true,
+      required: true,
       unique: true,
     },
     studentClass: {
       type: String,
-      require: true,
+      required: true,
     },
     address: {
       type: String,
-      require: true,
+      required: true,
     },
     phone: {
       type: Number,
-      require: true,
+      required: true,
     },
   },
   { timestamps: true },
