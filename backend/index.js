@@ -1,11 +1,11 @@
-const express = require("express")
-const app = express()
-const cors = require("cors")
 const dotenv = require("dotenv")
-const connectDB = require("./config/db")
+const express = require("express")
+const cors = require("cors")
+const app = express()
+// const connectDB = require("./config/neo4j")
 
 dotenv.config()
-connectDB()
+// connectDB()
 
 app.use(cors())
 app.use(express.json())
