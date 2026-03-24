@@ -1,0 +1,66 @@
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-135deg, #c8c550d9, #c18686);
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    width: 500px;
+    padding: 20px 70px;
+
+    .title {
+      font-family: 'Poppins-Bold';
+      font-size: 42px;
+      color: #333333;
+      line-height: 1.2;
+      text-align: center;
+      font-weight: 700;
+      width: 100%;
+      display: block;
+    }
+    .form-group {
+      margin-top: 20px;
+      label {
+        font-weight: 700;
+      }
+      input {
+        border: 0;
+        border-bottom: 1px solid rgb(155, 154, 154);
+        border-radius: 0px;
+      }
+      input::placeholder {
+        font-size: 14px;
+        font-family: monospace;
+      }
+      .form-control:focus {
+        box-shadow: none;
+      }
+    }
+    .login-btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      button {
+        background: linear-gradient(-135deg, #c850c0, #4158d0);
+        width: 50%;
+        font-size: 20px;
+        color: white;
+        border-radius: 50%;
+        padding: 10px;
+      }
+    }
+    p {
+      text-align: center;
+      margin-top: 20px;
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+}

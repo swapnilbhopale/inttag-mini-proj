@@ -11,4 +11,8 @@ export class PostAuthService {
   getEmpData() {
     return this.http.get(API_URL + '/data');
   }
+
+  postEmpData(data: any) {
+    return this.http.post(API_URL + '/create', data);
+  }
 }
