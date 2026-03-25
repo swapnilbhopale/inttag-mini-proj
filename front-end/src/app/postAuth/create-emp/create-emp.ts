@@ -11,7 +11,7 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class CreateEmp implements OnInit {
   employeeForm!: FormGroup;
-  buttonText: string = 'Create Employee';
+  buttonText: string = 'Register';
 
   constructor(
     private fb: FormBuilder,
@@ -52,7 +52,7 @@ export class CreateEmp implements OnInit {
 
   onSubmit() {
     const formData = this.employeeForm.value;
-    if (this.buttonText === 'Create Employee')
+    if (this.buttonText === 'Register')
       this.postAuth.postEmpData(formData).subscribe({
         next: (res: any) => {
           alert(res.message);

@@ -104,6 +104,6 @@ exports.updateEMp = async (req, res) => {
         });
     }
     finally {
-        await Selection.close()
+        await session.close()
     }
 }
