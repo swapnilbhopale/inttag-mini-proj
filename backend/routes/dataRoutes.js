@@ -9,6 +9,6 @@ router.post("/create", createEmp);
 router.get('/data', getEmp)
 
 //delete empData
-router.delete('/del-emp', deleteEmp)
+router.delete('/del-emp/:email', deleteEmp)
 
 module.exports = router

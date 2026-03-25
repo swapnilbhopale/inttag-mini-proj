@@ -36,7 +36,9 @@
                         <button class="btn btn-sm btn-primary" routerLink="/create-emp">
                           Edit
                         </button>
-                        <button class="btn btn-sm btn-danger">Delete</button>
+                        <button class="btn btn-sm btn-danger" (click)="deleteData(item.email)">
+                          Delete
+                        </button>
                       </div>
                     </td>
                   </tr>

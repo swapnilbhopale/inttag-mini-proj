@@ -29,7 +29,7 @@ exports.getEmp = async (req, res) => {
 
     try {
         const result = await session.run(
-            "MATCH (e:Employee) RETURN e"
+            "MATCH (e:Employee) RETURN e "
         );
 
         const employess = result.records.map(records => records.get('e').properties)
@@ -43,28 +43,31 @@ exports.getEmp = async (req, res) => {
 }
 
 exports.deleteEmp = async (req, res) => {
-    const { email } = req.body
-    const session = driver.session()
+    const email = req.params.email;
+    const session = driver.session();
 
     try {
-        const checkEmail = await session.run(
-            "MATCH (e:Employee {eamil: $email} RETURN e)", { email }
+        const result = await session.run(
+            `
+            MATCH (e:Employee {email: $email})
+            WITH COUNT(e) AS count, collect(e) AS nodes
+            FOREACH (n IN nodes | DELETE n)
+            RETURN count
+            `,
+            { email }
         );
-        if (checkEmail.records.length == 0) {
-            return res.status(400).json({ message: "user not found.", })
-        }
-        else {
-            await session.run(
-                "MATCH (e:Employee {email: $email}) DELETE e", { email }
-            )
-            res.status(200).json({ message: "User deleted successfully" })
+
+        const count = result.records[0].get('count').toInt();
+
+        if (count === 0) {
+            return res.status(404).json({ message: "User not found" });
         }
 
+        return res.status(200).json({ message: "User deleted successfully" });
+
+    } catch (err) {
+        return res.status(500).json({ message: err.message });
+    } finally {
+        await session.close();
     }
-    catch (err) {
-        res.status(500).json({ message: err.message });
-    }
-    finally {
-        await session.close()
-    }
-}
+};

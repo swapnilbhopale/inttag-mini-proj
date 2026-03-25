@@ -34,4 +34,16 @@ export class Dashboard implements OnInit {
       this.cdr.detectChanges();
     });
   }
+
+  deleteData(email: string) {
+    this.postAuth.deleteEmpData(email).subscribe({
+      next: () => {
+        alert('Deleted successfully');
+        this.getData();
+      },
+      error: (err) => {
+        console.error(err);
+      },
+    });
+  }
 }

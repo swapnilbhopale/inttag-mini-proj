@@ -15,4 +15,8 @@ export class PostAuthService {
   postEmpData(data: any) {
     return this.http.post(API_URL + '/create', data);
   }
+
+  deleteEmpData(email: string) {
+    return this.http.delete(`${API_URL}/del-emp/${email}`);
+  }
 }
