@@ -2,65 +2,110 @@
   width: 100%;
   min-height: 100vh;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   background: linear-gradient(-135deg, #c8c550d9, #c18686);
+
   .container {
-    display: flex;
-    justify-content: center;
+    width: 100%;
   }
+
+  .list {
+    float: none;
+    display: block;
+    margin-left: auto;
+  }
+
   .card {
-    width: 500px;
-    padding: 20px 70px;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 12px;
 
     .title {
       font-family: 'Poppins-Bold';
-      font-size: 42px;
-      color: #333333;
-      line-height: 1.2;
+      font-size: 36px;
       text-align: center;
       font-weight: 700;
-      width: 100%;
-      display: block;
     }
+
     .form-group {
       margin-top: 20px;
+
       label {
-        font-weight: 700;
+        font-weight: 600;
       }
+
       input {
         border: 0;
         border-bottom: 1px solid rgb(155, 154, 154);
-        border-radius: 0px;
+        border-radius: 0;
       }
+
       input::placeholder {
         font-size: 14px;
         font-family: monospace;
       }
+
       .form-control:focus {
         box-shadow: none;
+        border-bottom: 2px solid #4158d0;
       }
     }
+
     .login-btn {
       display: flex;
       justify-content: center;
       margin-top: 30px;
+
       button {
         background: linear-gradient(-135deg, #c850c0, #4158d0);
-        width: 50%;
-        font-size: 20px;
+        width: 100%;
+        max-width: 250px;
+        font-size: 18px;
         color: white;
-        border-radius: 50%;
+        border-radius: 25px;
         padding: 10px;
       }
     }
-    p {
-      text-align: center;
-      margin-top: 20px;
-      span {
-        cursor: pointer;
-      }
-    }
+  }
+}
+
+/* ✅ Tablet */
+@media (max-width: 768px) {
+  .main .card {
+    padding: 25px;
+  }
+
+  .main .card .title {
+    font-size: 28px;
+  }
+}
+
+/* ✅ Mobile */
+@media (max-width: 576px) {
+  .main {
+    padding: 15px;
+  }
+
+  .main .card {
+    padding: 20px;
+  }
+
+  .main .card .title {
+    font-size: 22px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-control {
+    font-size: 14px;
+  }
+
+  .list {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }

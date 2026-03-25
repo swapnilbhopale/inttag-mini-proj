@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { PostAuthService } from '../../Services/post-auth-service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-create-emp',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterLink],
   templateUrl: './create-emp.html',
   styleUrl: './create-emp.scss',
 })
