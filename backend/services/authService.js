@@ -1,6 +1,5 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-// const User = require("../models/user");
 const driver = require("../config/neo4j");
 
 exports.register = async (req, res) => {

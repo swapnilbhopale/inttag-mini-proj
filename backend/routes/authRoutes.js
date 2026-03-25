@@ -6,13 +6,4 @@ router.post("/register", register);
 
 router.post("/login", login);
 
-const authMiddleWAre = require("../middleware/authMiddleware");
-
-router.get("/dashboard", authMiddleWAre, (req, res) => {
-  res.json({
-    message: "Welcome to dashboard",
-  });
-
-});
-
 module.exports = router;
