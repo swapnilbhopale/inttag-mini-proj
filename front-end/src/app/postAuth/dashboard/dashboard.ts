@@ -38,12 +38,15 @@ export class Dashboard implements OnInit {
   deleteData(email: string) {
     this.postAuth.deleteEmpData(email).subscribe({
       next: () => {
-        alert('Deleted successfully');
+        alert('Employee Deleted successfully');
         this.getData();
       },
       error: (err) => {
         console.error(err);
       },
     });
+  }
+  editData(item: any) {
+    // this.router.navigate(['/create-emp'], { state: { empData: item } });
   }
 }

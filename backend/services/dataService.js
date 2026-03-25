@@ -71,3 +71,39 @@ exports.deleteEmp = async (req, res) => {
         await session.close();
     }
 };
+
+exports.updateEMp = async (req, res) => {
+    const { name, email, designation, phone, address } = req.body
+    const session = driver.session()
+
+    try {
+        const result = await session.run(
+            `
+            MATCH (e:Employee {email: $email})
+            SET e.name = $name,
+            e.email = $email,
+            e.designation = $designation,
+            e.phone = $phone,
+            e.address = $address
+            RETURN e`, { name, email, designation, phone, address }
+        )
+
+        if (result.records.length === 0) {
+            res.status(404).json({ message: "Employee not found" })
+        }
+
+        const updatedEmp = result.records[0].get('e').properties
+        return res.status(200).json({
+            message: "Employee updated successfully",
+            data: updatedEmp
+        })
+    }
+    catch (err) {
+        res.status(500).json({
+            message: err.message
+        });
+    }
+    finally {
+        await Selection.close()
+    }
+}
