@@ -46,7 +46,8 @@ export class Dashboard implements OnInit {
       },
     });
   }
-  editData(item: any) {
-    // this.router.navigate(['/create-emp'], { state: { empData: item } });
+
+  searchData(data: string) {
+    console.log(data);
   }
 }
