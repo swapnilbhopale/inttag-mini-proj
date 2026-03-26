@@ -49,5 +49,6 @@ export class Dashboard implements OnInit {
 
   searchData(data: string) {
     console.log(data);
+    // testing
   }
 }
