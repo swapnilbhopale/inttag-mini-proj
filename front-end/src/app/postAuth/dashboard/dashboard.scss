@@ -1,8 +1,21 @@
+.search-input {
+  margin-bottom: 16px;
+
+  label {
+    font-size: 20px;
+    margin-right: 5px;
+  }
+
+  input {
+    width: 50%;
+  }
+}
+
 .data-table {
   width: auto;
 }
 
-/* Mobile improvements */
+/* Mobile */
 @media (max-width: 576px) {
   table {
     font-size: 12px;

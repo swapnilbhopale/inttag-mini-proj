@@ -20,8 +20,8 @@ export class CreateEmp implements OnInit {
   ) {
     this.employeeForm = this.fb.group({
       name: ['', Validators.required],
-      designation: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
+      designation: ['', Validators.required],
       phone: ['', Validators.required],
       address: ['', Validators.required],
     });
