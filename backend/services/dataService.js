@@ -5,14 +5,14 @@ exports.createEmp = async (req, res) => {
     const { name, email, designation, phone, address } = req.body;
     const session = driver.session();
     try {
-        logger.info(`Create Emp API Call for email: ${email}`)
+        logger.info(`Create Emp API Call for email: ${ email }`)
 
         const isEmailPresent = await session.run(
             `MATCH (e:Employee {email: $email}) RETURN e`, { email }
         )
 
         if (isEmailPresent.records.length > 0) {
-            logger.warn(`Duplicate email attempt: ${email}`)
+            logger.warn(`Duplicate email attempt: ${ email }`)
             return res.status(400).json({ message: "Email already exists" })
         }
 
@@ -26,7 +26,7 @@ exports.createEmp = async (req, res) => {
                 })
       `, { name, email, designation, phone, address }
         )
-        logger.info(`Employee created successfully: ${email}`)
+        logger.info(`Employee created successfully: ${ email }`)
         res.json({ message: "Employee created successfully" })
     }
     catch (err) {
@@ -49,7 +49,7 @@ exports.getEmp = async (req, res) => {
         );
 
         const employess = result.records.map(records => records.get('e').properties)
-        logger.info(`Emp ${employess.length} fetched.`)
+        logger.info(`GET API ${employess.length} Emp fetched.`)
         res.json(employess)
     }
     catch (err) {
@@ -66,7 +66,7 @@ exports.deleteEmp = async (req, res) => {
     const session = driver.session();
 
     try {
-        logger.info(`Delete Emp API Call for email: ${email}`)
+        logger.info(`Delete Emp API Call for email: ${ email }`)
         
         const result = await session.run(
             `
@@ -81,11 +81,11 @@ exports.deleteEmp = async (req, res) => {
         const count = result.records[0].get('count').toInt();
 
         if (count === 0) {
-            logger.warn(`Epm not found for delete API call ${email}`)
+            logger.warn(`Epm not found for delete API call ${ email }`)
             return res.status(404).json({ message: "User not found" });
         }
 
-        logger.info(`EMP deleted sucessfully ${email}`)
+        logger.info(`EMP deleted sucessfully ${ email }`)
         return res.status(200).json({ message: "User deleted successfully" });
 
     } catch (err) {
@@ -103,7 +103,7 @@ exports.updateEMp = async (req, res) => {
     const session = driver.session()
 
     try {
-        logger.info(`Emp update API call for ${email}`)
+        logger.info(`Emp update API call for ${ email }`)
         const result = await session.run(
             `
             MATCH (e:Employee {email: $email})
@@ -116,12 +116,12 @@ exports.updateEMp = async (req, res) => {
         )
 
         if (result.records.length === 0) {
-            logger.warn(`Emp not found for update ${email}`)
+            logger.warn(`Emp not found for update ${ email }`)
             res.status(404).json({ message: "Employee not found" })
         }
 
         const updatedEmp = result.records[0].get('e').properties
-        logger.info(`Emp updated successfully ${email}`)
+        logger.info(`Emp updated successfully ${ email }`)
         return res.status(200).json({
             message: "Employee updated successfully",
             data: updatedEmp

@@ -4,3 +4,18 @@
 2026-03-27T09:28:57.128Z [INFO]: Emp update API call for rahul@gmail.com
 2026-03-27T09:28:57.254Z [INFO]: Emp updated successfully rahul@gmail.com
 2026-03-27T09:28:57.257Z [INFO]: Neo4j session closed for update Emp API call
+2026-03-27T10:32:52.918Z [INFO]: Get Emp API Call
+2026-03-27T10:32:52.945Z [INFO]: Emp 3 fetched.
+2026-03-27T10:32:52.947Z [INFO]: Neo4j session closed for get Emp API
+2026-03-27T10:37:55.082Z [INFO]: Get Emp API Call
+2026-03-27T10:37:55.086Z [INFO]: Emp 3 fetched.
+2026-03-27T10:37:55.087Z [INFO]: Neo4j session closed for get Emp API
+2026-03-27T10:48:15.718Z [INFO]: Get Emp API Call
+2026-03-27T10:48:15.729Z [INFO]: Emp 3 fetched.
+2026-03-27T10:48:15.729Z [INFO]: Neo4j session closed for get Emp API
+2026-03-27T11:04:06.449Z [INFO]: Get Emp API Call
+2026-03-27T11:04:06.454Z [INFO]: Emp 3 fetched.
+2026-03-27T11:04:06.455Z [INFO]: Neo4j session closed for get Emp API
+2026-03-30T04:38:20.649Z [INFO]: Get Emp API Call
+2026-03-30T04:38:20.681Z [INFO]: Emp 3 fetched.
+2026-03-30T04:38:20.682Z [INFO]: Neo4j session closed for get Emp API
