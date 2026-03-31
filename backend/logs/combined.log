@@ -19,3 +19,69 @@
 2026-03-30T04:38:20.649Z [INFO]: Get Emp API Call
 2026-03-30T04:38:20.681Z [INFO]: Emp 3 fetched.
 2026-03-30T04:38:20.682Z [INFO]: Neo4j session closed for get Emp API
+2026-03-30T05:53:38.022Z [INFO]: Get Emp API Call
+2026-03-30T05:53:38.044Z [INFO]: GET API 3 Emp fetched.
+2026-03-30T05:53:38.046Z [INFO]: Neo4j session closed for get Emp API
+2026-03-30T06:02:08.256Z [INFO]: Get Emp API Call
+2026-03-30T06:02:08.274Z [INFO]: GET API 3 Emp fetched.
+2026-03-30T06:02:08.276Z [INFO]: Neo4j session closed for get Emp API
+2026-03-30T06:44:40.561Z [INFO]: Get Emp API Call
+2026-03-30T06:44:40.586Z [INFO]: GET API 3 Emp fetched.
+2026-03-30T06:44:40.588Z [INFO]: Neo4j session closed for get Emp API
+2026-03-30T06:55:54.657Z [INFO]: Get Emp API Call
+2026-03-30T06:55:54.662Z [INFO]: GET API 3 Emp fetched.
+2026-03-30T06:55:54.663Z [INFO]: Neo4j session closed for get Emp API
+2026-03-30T08:53:01.788Z [INFO]: Login Attempt by user: chetan@gmail.com
+2026-03-30T08:53:01.998Z [INFO]: User logged successfully: chetan@gmail.com
+2026-03-30T08:53:02.000Z [INFO]: Neo4j sesssion closed for loggin POST API
+2026-03-30T08:53:02.017Z [INFO]: Get Emp API Call
+2026-03-30T08:53:02.055Z [INFO]: GET API 3 Emp fetched.
+2026-03-30T08:53:02.056Z [INFO]: Neo4j session closed for get Emp API
+2026-03-30T08:54:51.550Z [INFO]: Login Attempt by user: chetan@gmail.com
+2026-03-30T08:54:51.631Z [INFO]: User logged successfully: chetan@gmail.com
+2026-03-30T08:54:51.632Z [INFO]: Neo4j sesssion closed for loggin POST API
+2026-03-30T08:54:51.646Z [INFO]: Get Emp API Call
+2026-03-30T08:54:51.652Z [INFO]: GET API 3 Emp fetched.
+2026-03-30T08:54:51.653Z [INFO]: Neo4j session closed for get Emp API
+2026-03-30T09:59:45.631Z [INFO]: Get Emp API Call
+2026-03-30T09:59:45.649Z [INFO]: GET API 3 Emp fetched.
+2026-03-30T09:59:45.650Z [INFO]: Neo4j session closed for get Emp API
+2026-03-30T11:10:20.582Z [INFO]: Get Emp API Call
+2026-03-30T11:10:20.589Z [INFO]: GET API 3 Emp fetched.
+2026-03-30T11:10:20.590Z [INFO]: Neo4j session closed for get Emp API
+2026-03-30T11:34:04.608Z [INFO]: Get Emp API Call
+2026-03-30T11:34:04.639Z [INFO]: GET API 3 Emp fetched.
+2026-03-30T11:34:04.641Z [INFO]: Neo4j session closed for get Emp API
+2026-03-31T04:31:39.163Z [INFO]: Login Attempt by user: chetan@gmail.com
+2026-03-31T04:31:39.304Z [INFO]: User logged successfully: chetan@gmail.com
+2026-03-31T04:31:39.306Z [INFO]: Neo4j sesssion closed for loggin POST API
+2026-03-31T04:31:39.328Z [INFO]: Get Emp API Call
+2026-03-31T04:31:39.358Z [INFO]: GET API 3 Emp fetched.
+2026-03-31T04:31:39.358Z [INFO]: Neo4j session closed for get Emp API
+2026-03-31T04:45:59.471Z [INFO]: Login Attempt by user: chetan@gmail.com
+2026-03-31T04:45:59.550Z [INFO]: User logged successfully: chetan@gmail.com
+2026-03-31T04:45:59.550Z [INFO]: Neo4j sesssion closed for loggin POST API
+2026-03-31T04:45:59.564Z [INFO]: Get Emp API Call
+2026-03-31T04:45:59.570Z [INFO]: GET API 3 Emp fetched.
+2026-03-31T04:45:59.571Z [INFO]: Neo4j session closed for get Emp API
+2026-03-31T04:50:15.451Z [INFO]: Get Emp API Call
+2026-03-31T04:50:15.456Z [INFO]: GET API 3 Emp fetched.
+2026-03-31T04:50:15.456Z [INFO]: Neo4j session closed for get Emp API
+2026-03-31T05:01:13.618Z [INFO]: Get Emp API Call
+2026-03-31T05:01:13.623Z [INFO]: GET API 3 Emp fetched.
+2026-03-31T05:01:13.624Z [INFO]: Neo4j session closed for get Emp API
+2026-03-31T05:03:53.407Z [INFO]: Get Emp API Call
+2026-03-31T05:03:53.412Z [INFO]: GET API 3 Emp fetched.
+2026-03-31T05:03:53.413Z [INFO]: Neo4j session closed for get Emp API
+2026-03-31T05:06:18.090Z [INFO]: Get Emp API Call
+2026-03-31T05:06:18.095Z [INFO]: GET API 3 Emp fetched.
+2026-03-31T05:06:18.095Z [INFO]: Neo4j session closed for get Emp API
+2026-03-31T06:08:20.164Z [INFO]: Get Emp API Call
+2026-03-31T06:08:20.241Z [INFO]: GET API 3 Emp fetched.
+2026-03-31T06:08:20.244Z [INFO]: Neo4j session closed for get Emp API
+2026-03-31T06:17:46.300Z [INFO]: Get Emp API Call
+2026-03-31T06:17:46.307Z [INFO]: GET API 3 Emp fetched.
+2026-03-31T06:17:46.308Z [INFO]: Neo4j session closed for get Emp API
+2026-03-31T06:59:02.128Z [INFO]: Get Emp API Call
+2026-03-31T06:59:02.162Z [INFO]: GET API 3 Emp fetched.
+2026-03-31T06:59:02.166Z [INFO]: Neo4j session closed for get Emp API

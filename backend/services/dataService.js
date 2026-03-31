@@ -12,7 +12,7 @@ exports.createEmp = async (req, res) => {
         )
 
         if (isEmailPresent.records.length > 0) {
-            logger.warn(`Duplicate email attempt: ${ email }`)
+            logger.warn(`Duplicate email attempt Emp Create API call: ${ email }`)
             return res.status(400).json({ message: "Email already exists" })
         }
 
@@ -45,7 +45,7 @@ exports.getEmp = async (req, res) => {
     try {
         logger.info(`Get Emp API Call`)
         const result = await session.run(
-            "MATCH (e:Employee) RETURN e "
+            "MATCH (e:Employee) RETURN e"
         );
 
         const employess = result.records.map(records => records.get('e').properties)
