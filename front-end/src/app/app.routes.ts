@@ -4,6 +4,7 @@ import { Register } from './preAuth/register/register';
 import { Dashboard } from './postAuth/dashboard/dashboard';
 import { authGuard } from './guards/auth-guard';
 import { CreateEmp } from './postAuth/create-emp/create-emp';
+import { RegisterMovie } from './postAuth/register-movie/register-movie';
 
 export const routes: Routes = [
   { path: 'login', component: Login },
@@ -12,4 +13,6 @@ export const routes: Routes = [
   { path: 'dashboard', component: Dashboard, canActivate: [authGuard] },
   { path: 'create-emp', component: CreateEmp, canActivate: [authGuard] },
   { path: 'update-emp', component: CreateEmp, canActivate: [authGuard] },
+  { path: 'register-movie', component: RegisterMovie, canActivate: [authGuard] },
+
 ];

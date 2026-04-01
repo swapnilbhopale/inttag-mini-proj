@@ -1,0 +1,1 @@
+2026-03-31T11:20:40.291Z [ERROR]: error in get Emp API call: Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: connect ECONNREFUSED 127.0.0.1:7687

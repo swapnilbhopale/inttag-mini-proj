@@ -1,0 +1,185 @@
+<div class="main">
+  <div class="container">
+    <div class="row mb-3">
+      <div class="col-12 text-end">
+        <button class="btn btn-info list" routerLink="/dashboard">See List</button>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-10 col-md-8 col-lg-6 card-wrapper">
+        <div class="card p-4 shadow">
+          <h1 class="title text-center mb-4">
+            {{ buttonText == 'Register' ? 'Create' : 'Update' }} Movie
+          </h1>
+
+          <form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+            <div class="form-group mb-3">
+              <label>Movie Title</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="enter movie name"
+                formControlName="title"
+              />
+            </div>
+
+            <div class="form-group mb-3">
+              <label>Slug</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="enter slug"
+                formControlName="slug"
+              />
+            </div>
+
+            <div class="form-group mb-3">
+              <label>Synopsis</label>
+              <textarea
+                class="form-control"
+                placeholder="enter synopsis"
+                formControlName="synopsis"
+              ></textarea>
+            </div>
+
+            <!-- Genres (FormArray) -->
+
+            <div class="mb-3" formArrayName="genres">
+              <label class="form-label">Genres</label>
+
+              @for (genre of genres.controls; track $index) {
+                <div class="d-flex gap-2 mb-2">
+                  <input
+                    class="form-control"
+                    [formControlName]="$index"
+                    placeholder="Enter genre"
+                  />
+
+                  <button type="button" class="btn btn-danger" (click)="removeGenre($index)">
+                    X
+                  </button>
+                </div>
+              }
+
+              <button type="button" class="btn btn-primary" (click)="addGenre()">
+                + Add Genre
+              </button>
+
+              <!-- Validation -->
+              @if (genres.invalid && genres.touched) {
+                <small class="text-danger"> At least one genre is required </small>
+              }
+            </div>
+            <!-- Language -->
+            <div class="mb-3">
+              <label>Language</label>
+              <input class="form-control" formControlName="language" />
+            </div>
+
+            <!-- Duration -->
+            <div class="mb-3">
+              <label>Duration (Minutes)</label>
+              <input type="number" class="form-control" formControlName="durationMinutes" />
+            </div>
+
+            <!-- Release Date -->
+            <div class="mb-3">
+              <label>Release Date</label>
+              <input type="date" class="form-control" formControlName="releaseDate" />
+            </div>
+
+            <!-- Production Status -->
+            <div class="mb-3">
+              <label>Production Status</label>
+              <select class="form-control" formControlName="productionStatus">
+                <option value="">Select</option>
+                @for (s of productionStatusList; track s) {
+                  <option [value]="s">
+                    {{ s }}
+                  </option>
+                }
+              </select>
+            </div>
+
+            <!-- Visibility -->
+            <div class="mb-3">
+              <label>Visibility</label>
+              <select class="form-control" formControlName="visibility">
+                <option value="">Select</option>
+                @for (v of visibilityList; track v) {
+                  <option [value]="v">
+                    {{ v }}
+                  </option>
+                }
+              </select>
+            </div>
+
+            <!-- Director -->
+            <div class="mb-3">
+              <label>Director</label>
+              <input class="form-control" formControlName="director" />
+            </div>
+
+            <!-- Cast (FormArray) -->
+            <div class="mb-3" formArrayName="cast">
+              <label>Cast</label>
+
+              @for (actor of cast.controls; track $index) {
+                <div class="d-flex mb-2">
+                  <input
+                    class="form-control me-2"
+                    [formControlName]="$index"
+                    placeholder="Enter actor name"
+                  />
+                  <button type="button" class="btn btn-danger" (click)="removeCast($index)">
+                    X
+                  </button>
+                </div>
+              }
+
+              <button type="button" class="btn btn-primary" (click)="addCast()">+ Add Cast</button>
+            </div>
+
+            <!-- Poster URL -->
+            <div class="mb-3">
+              <label>Poster URL</label>
+              <input class="form-control" formControlName="posterUrl" />
+            </div>
+
+            <!-- Tags (FormArray) -->
+            <div class="mb-3" formArrayName="tags">
+              <label>Tags</label>
+
+              @for (tag of tags.controls; track $index) {
+                <div class="d-flex mb-2">
+                  <input
+                    class="form-control me-2"
+                    [formControlName]="$index"
+                    placeholder="Enter tag"
+                  />
+                  <button type="button" class="btn btn-danger" (click)="removeTag($index)">
+                    X
+                  </button>
+                </div>
+              }
+
+              <button type="button" class="btn btn-primary" (click)="addTag()">+ Add Tag</button>
+            </div>
+
+            <!-- Is Archived -->
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" formControlName="isArchived" />
+              <label class="form-check-label">Is Archived</label>
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary" [disabled]="movieForm.invalid">
+                {{ buttonText }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
