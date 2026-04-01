@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { PostAuthService } from '../../Services/post-auth-service';
 
 @Component({
   selector: 'app-register-movie',
@@ -18,6 +19,7 @@ export class RegisterMovie implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
+    private postAuthService: PostAuthService,
   ) {
     this.movieForm = this.fb.group({
       title: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(150)]],
@@ -79,6 +81,14 @@ export class RegisterMovie implements OnInit {
   }
 
   onSubmit() {
-    const movieData = this.movieForm.value;
+    const formData = this.movieForm.value;
+    this.postAuthService.postNewMovie(formData).subscribe({
+      next: (res: any) => {
+        alert(res.message);
+      },
+      error: (res: any) => {
+        alert(`An error occured: ${res.error.message}`);
+      },
+    });
   }
 }
