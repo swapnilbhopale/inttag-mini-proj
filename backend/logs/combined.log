@@ -121,3 +121,21 @@
 2026-04-01T04:45:21.035Z [INFO]: Get Emp API Call
 2026-04-01T04:45:21.049Z [INFO]: GET API 0 Emp fetched.
 2026-04-01T04:45:21.050Z [INFO]: Neo4j session closed for get Emp API
+2026-04-02T04:50:51.881Z [INFO]: Login Attempt by user: chetan@gmail.com
+2026-04-02T04:50:52.063Z [INFO]: User logged successfully: chetan@gmail.com
+2026-04-02T04:50:52.064Z [INFO]: Neo4j sesssion closed for loggin POST API
+2026-04-02T04:50:52.080Z [INFO]: Get Emp API Call
+2026-04-02T04:50:52.108Z [INFO]: GET API 0 Emp fetched.
+2026-04-02T04:50:52.109Z [INFO]: Neo4j session closed for get Emp API
+2026-04-02T05:03:13.248Z [INFO]: Get Emp API Call
+2026-04-02T05:03:13.269Z [INFO]: GET API 0 Emp fetched.
+2026-04-02T05:03:13.271Z [INFO]: Neo4j session closed for get Emp API
+2026-04-02T05:04:03.557Z [INFO]: Login Attempt by user: chetan@gmail.com
+2026-04-02T05:04:03.648Z [INFO]: User logged successfully: chetan@gmail.com
+2026-04-02T05:04:03.649Z [INFO]: Neo4j sesssion closed for loggin POST API
+2026-04-02T05:04:03.664Z [INFO]: Get Emp API Call
+2026-04-02T05:04:03.670Z [INFO]: GET API 0 Emp fetched.
+2026-04-02T05:04:03.671Z [INFO]: Neo4j session closed for get Emp API
+2026-04-02T05:17:41.325Z [INFO]: Get Emp API Call
+2026-04-02T05:17:41.331Z [INFO]: GET API 0 Emp fetched.
+2026-04-02T05:17:41.332Z [INFO]: Neo4j session closed for get Emp API

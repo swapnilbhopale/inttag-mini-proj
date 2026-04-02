@@ -8,24 +8,28 @@
 3. create folder backend under that run command "npm init" or "npm init -y"
    it will create package.json file.
 
-4. install express which create server & APIs using command "npm install express"
+4. after cloning project under backend folder run command "npm i"
+5. to run backend project command "npm run dev"
+   you skip below all commands.
 
-5. install mongoose to connect Node.js with MongoDB usind command "npm install mongoose"
+6. install express which create server & APIs using command "npm install express" or "npm i" for all dependencey.
 
-6. install dotenv to Stores sensitive data like DB URL & secret key
+7. install mongoose to connect Node.js with MongoDB usind command "npm install mongoose"
+
+8. install dotenv to Stores sensitive data like DB URL & secret key
    using command "npm install dotenv"
 
-7. install nodemon to Auto-restarts server when you change code
+9. install nodemon to Auto-restarts server when you change code
    usind command "npm install nodemon --save-dev"
 
-8. install morgan to usind command "npm install morgan"
+10. install morgan to usind command "npm install morgan"
 
-9. install bcryptjs to hash passwords (secure storage)
-   using command "npm install bcryptjs"
-10. install jsonwebtoken to create JWT token for authentication
+11. install bcryptjs to hash passwords (secure storage)
+    using command "npm install bcryptjs"
+12. install jsonwebtoken to create JWT token for authentication
     using command "npm install jsonwebtoken"
-11. install cors for Angular frontend to call backend APIs using command "npm install cors"
-12. in package.json file add start under scripts object
+13. install cors for Angular frontend to call backend APIs using command "npm install cors"
+14. in package.json file add start under scripts object
     "scripts": {
     "start": "nodemon app.js"
     }

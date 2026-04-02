@@ -12,16 +12,18 @@ import { CommonModule } from '@angular/common';
 })
 export class Dashboard implements OnInit {
   empData: any[] = [];
-  tempData: any[] = []
+  tempData: any[] = [];
+  movieData: [] = [];
   constructor(
     private loginService: PreAuthService,
     private postAuth: PostAuthService,
     private router: Router,
     private cdr: ChangeDetectorRef,
-  ) { }
+  ) {}
 
   ngOnInit() {
-    this.getData();
+    // this.getData();
+    this.getAllMovieData();
   }
 
   logout() {
@@ -33,7 +35,7 @@ export class Dashboard implements OnInit {
     this.postAuth.getEmpData().subscribe((res: any) => {
       this.empData = res;
       this.cdr.detectChanges();
-      this.tempData = this.empData
+      this.tempData = this.empData;
     });
   }
 
@@ -50,14 +52,21 @@ export class Dashboard implements OnInit {
   }
 
   searchData(data: string) {
-    const searchText = data.toLowerCase()
+    const searchText = data.toLowerCase();
 
-    this.empData = this.tempData.filter(data =>
-      data.name.toLowerCase().includes(searchText) ||
-      data.email.toLowerCase().includes(searchText) ||
-      data.designation.toLowerCase().includes(searchText) ||
-      data.phone.includes(searchText) ||
-      data.address.toLowerCase().includes(searchText)
-    )
+    this.empData = this.tempData.filter(
+      (data) =>
+        data.name.toLowerCase().includes(searchText) ||
+        data.email.toLowerCase().includes(searchText) ||
+        data.designation.toLowerCase().includes(searchText) ||
+        data.phone.includes(searchText) ||
+        data.address.toLowerCase().includes(searchText),
+    );
+  }
+
+  getAllMovieData() {
+    this.postAuth.getAllMovies().subscribe((res: any) => {
+      this.movieData = res;
+    });
   }
 }

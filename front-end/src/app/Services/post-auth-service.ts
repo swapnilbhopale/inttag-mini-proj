@@ -27,4 +27,8 @@ export class PostAuthService {
   postNewMovie(data: any) {
     return this.http.post(API_URL + '/movies', data);
   }
+
+  getAllMovies() {
+    return this.http.get(API_URL + '/movies');
+  }
 }

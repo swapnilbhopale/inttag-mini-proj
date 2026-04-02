@@ -7,4 +7,6 @@ const router = express.Router()
 router.post('/movies', authMiddleWare, createMovie)
 
 // get all movies
-router.get('/movies', authMiddleWare, getAllMovies)
+router.get('/movies', getAllMovies)
+
+module.exports = router
